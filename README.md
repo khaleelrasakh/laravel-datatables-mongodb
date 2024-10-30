@@ -68,9 +68,9 @@ __or__ open the `config/datatables.php` file and add the engines manually to the
      * Note, only change this if you know what you are doing!
      */
     'builders'       => [
-        //Jenssegers\Mongodb\Eloquent\Builder::class             => 'moloquent',
-        //Jenssegers\Mongodb\Query\Builder::class                => 'mongodb-query',
-        //Jenssegers\Mongodb\Helpers\EloquentBuilder::class      => 'eloquent',
+        //MongoDB\Laravel\Eloquent\Builder::class             => 'moloquent',
+        //MongoDB\Laravel\Query\Builder::class                => 'mongodb-query',
+        //MongoDB\Laravel\Helpers\EloquentBuilder::class      => 'eloquent',
         //Illuminate\Database\Eloquent\Relations\Relation::class => 'eloquent',
         //Illuminate\Database\Eloquent\Builder::class            => 'eloquent',
         //Illuminate\Database\Query\Builder::class               => 'query',
@@ -103,7 +103,7 @@ return (new MongodbDataTable(App\User::where('id', '>', 1))->toJson()
 - Add the `MongodbDataTableTrait` trait to your model.
 
 ```php
-use Jenssegers\Mongodb\Eloquent\Model;
+use MongoDB\Laravel\Eloquent\Model;
 use Pimlie\DataTables\Traits\MongodbDataTableTrait;
 
 class User extends Model

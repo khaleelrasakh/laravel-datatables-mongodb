@@ -3,7 +3,7 @@ namespace Pimlie\DataTables\Tests;
 
 use DB;
 use Illuminate\Http\JsonResponse;
-use Jenssegers\Mongodb\Query\Builder;
+use MongoDB\Laravel\Query\Builder;
 use Yajra\DataTables\DataTables;
 use Yajra\DataTables\Facades\DataTables as DatatablesFacade;
 use Pimlie\DataTables\MongodbQueryDataTable;

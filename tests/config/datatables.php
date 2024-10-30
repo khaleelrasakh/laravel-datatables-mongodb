@@ -51,9 +51,9 @@ return [
      * DataTables accepted builder to engine mapping.
      */
     'builders'       => [
-        Jenssegers\Mongodb\Eloquent\Builder::class             => 'moloquent',
-        Jenssegers\Mongodb\Query\Builder::class                => 'mongodbQuery',
-        Jenssegers\Mongodb\Helpers\EloquentBuilder::class      => 'eloquent',
+        MongoDB\Laravel\Eloquent\Builder::class             => 'moloquent',
+        MongoDB\Laravel\Query\Builder::class                => 'mongodbQuery',
+        MongoDB\Laravel\Helpers\EloquentBuilder::class      => 'eloquent',
         //Illuminate\Database\Eloquent\Relations\Relation::class => 'eloquent',
         //Illuminate\Database\Eloquent\Builder::class            => 'eloquent',
         //Illuminate\Database\Query\Builder::class               => 'query',
