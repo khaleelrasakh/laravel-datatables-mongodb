@@ -11,11 +11,15 @@
         {
             "name": "pimlie",
             "email": "pimlie@hotmail.com"
+        },
+          {
+            "name": "KhaleeRasakh",
+            "email": "khaleelmew@icloud.com"
         }
     ],
     "require": {
-        "yajra/laravel-datatables-oracle": "^8.9|^9.6",
-        "jenssegers/mongodb" : "^3.4"
+        "yajra/laravel-datatables-oracle": "^11.0",
+        "mongodb/laravel-mongodb" : "^5.1"
     },
     "autoload": {
         "psr-4": {
