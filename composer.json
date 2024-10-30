@@ -14,7 +14,8 @@
         },
           {
             "name": "KhaleeRasakh",
-            "email": "khaleelmew@icloud.com"
+            "email": "khaleelmew@icloud.com",
+              "role":"nothing"
         }
     ],
     "require": {
