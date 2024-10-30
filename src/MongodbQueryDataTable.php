@@ -3,7 +3,7 @@
 namespace Pimlie\DataTables;
 
 use MongoDB\Laravel\Eloquent\Builder as MoloquentBuilder;
-use MongoDB\Laravel\Query\Builder;
+use MongoDB\Laravel\Query\Builder as QueryBuilder;
 use Illuminate\Support\Str;
 use Yajra\DataTables\QueryDataTable;
 use Yajra\DataTables\Utilities\Helper;
@@ -18,14 +18,15 @@ class MongodbQueryDataTable extends QueryDataTable
      */
     public static function canCreate($source):bool
     {
-        return $source instanceof Builder;
+        return $source instanceof QueryBuilder;
     }
 
     /**
      * @param \MongoDB\Laravel\Query\Builder $builder
      */
-    public function __construct(Builder $builder)
-    {
+    public function __construct(QueryBuilder $builder)
+    {   
+       
         parent::__construct($builder);
     }
 
@@ -46,7 +47,7 @@ class MongodbQueryDataTable extends QueryDataTable
         $query    = $this->getBaseQueryBuilder($query);
         $callback = $this->columnDef['filter'][$columnName]['method'];
 
-        if ($this->query instanceof MoloquentBuilder) {
+        if ($this->query instanceof QueryBuilder) {
             $builder = $this->query->newModelInstance()->newQuery();
         } else {
             $builder = $this->query->newQuery();
@@ -57,13 +58,13 @@ class MongodbQueryDataTable extends QueryDataTable
         $query->addNestedWhereQuery($this->getBaseQueryBuilder($builder), $boolean);
     }
 
-    protected function getBaseQueryBuilder($instance = null): MoloquentBuilder
+    protected function getBaseQueryBuilder($instance = null): QueryBuilder
     {
         if (!$instance) {
             $instance = $this->query;
         }
 
-        if ($instance instanceof MoloquentBuilder) {
+        if ($instance instanceof QueryBuilder) {
             return $instance->getQuery();
         }
 
