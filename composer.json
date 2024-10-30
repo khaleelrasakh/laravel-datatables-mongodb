@@ -12,14 +12,14 @@
             "name": "pimlie",
             "email": "pimlie@hotmail.com"
         },
-          {
+        {
             "name": "KhaleeRasakh",
             "email": "khaleelmew@icloud.com"
         }
     ],
     "require": {
         "yajra/laravel-datatables-oracle": "^11.0",
-        "mongodb/laravel-mongodb" : "^5.1"
+        "mongodb/laravel-mongodb": "^5.1"
     },
     "autoload": {
         "psr-4": {
@@ -31,11 +31,11 @@
             "Pimlie\\DataTables\\Tests\\": "tests/"
         }
     },
-  "extra": {
+    "extra": {
         "laravel": {
-          "providers": [
-            "Pimlie\\DataTables\\MongodbDataTablesServiceProvider"
-          ]
+            "providers": [
+                "Pimlie\\DataTables\\MongodbDataTablesServiceProvider"
+            ]
         }
     },
     "minimum-stability": "stable",
