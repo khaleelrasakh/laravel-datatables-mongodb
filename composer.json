@@ -1,5 +1,5 @@
 {
-    "name": "pimlie/laravel-datatables-mongodb",
+    "name": "khaleelrasakh/laravel-datatables-mongodb",
     "description": "Laravel DataTables plugin to support Mongodb",
     "keywords": [
         "laravel",
