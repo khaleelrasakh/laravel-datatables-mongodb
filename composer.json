@@ -19,7 +19,7 @@
     ],
     "require": {
         "khaleelrasakh/laravel-datatables-oracle": "^11.0@dev",
-        "mongodb/laravel-mongodb": "^5.1"
+        "mongodb/laravel-mongodb": "^4.1"
     },
     "autoload": {
         "psr-4": {
